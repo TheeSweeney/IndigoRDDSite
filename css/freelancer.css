@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir-Heavy', 'Avenir Heavy', 'Avenir';
   overflow-x: hidden;
 }
 p {
@@ -513,4 +513,8 @@ fieldset[disabled] .btn-success.active {
 }
 div#maincontent {
   outline: none;
+}
+
+.pt200 {
+  padding-top: 50px;
 }
