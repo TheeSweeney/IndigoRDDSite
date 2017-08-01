@@ -12,10 +12,9 @@
     <title>IndigoRDD</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+	<%= stylesheet_link_tag "bootstrap"%>
     <!-- Theme CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+	<%= stylesheet_link_tag "freelancer" %>
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -36,8 +35,8 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">
-                    <img id="homeImg" src="./img/longLogoBlack.png">
-                </a>
+					<%= image_tag "longLogoBlack.png", :id => "homeImg" %>
+				                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,9 +45,10 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
+                    <!---<li class="page-scroll">
                         <a href="#portfolio">Who We Are</a>
                     </li>
+					-->
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
@@ -61,161 +61,90 @@
 
     <!-- Header -->
     <header>
-        <img class="img-responsive pt100" src="img/headerRDD.png" alt="">
+		 <%= image_tag "headerRDD.png", :class => "img-responsive pt100", :alt => "" %>      
     </header>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div>
             <div class="row">
+				<div class="bottomSectionPadding"> </div>
                 <div class="col-lg-12 text-center">
-                    <h2>At Ingido RDD, <span class="pinkText">We Believe...</span></h2>
+                    <h2>At Indigo RDD, <span class="pinkText">We Believe...</span></h2>
                 </div>
             </div>
-            <div id="believeContainer">
-                <div class="believeContainer__row">
-                    <div class="believeContainer--grayBG believeContainer__leftBox believeContainer__row__box">
-                        <div>
-                            <img src="./img/computerGrey.png">
-                        </div>
-                        <div class="believeContainer__row__box__title">Times are changing</div>
-                        <div class="believeContainer__row__box__copy">These days, almost everyone has a smartphone in their pocket or acomputer at home. Our software transforms the devices your patients already have into powerful data-gathering tools.</div>
-                    </div>
-                    <div class="believeContainer__rightBox believeContainer__row__box">
-                        <div>
-                            <img src="./img/carFancyPurpWhite.png">
-                        </div>
-                        <div class="believeContainer__row__box__title">Patients shouldn't be burdened by the clinic</div>
-                        <div class="believeContainer__row__box__copy">One of the greatest pains for any patient managing a chronic illness or participating in a clinical trial is the back-and-forth travel to the clinic. Give your patients one less thing to worry about by collecting data remotely</div>
-                    </div>
-                </div>
-                <div class="believeContainer__row">
-                    <div class="believeContainer__leftBox believeContainer__row__box">
-                        <div>
-                            <img src="./img/housePurpGreyCopy.png">
-                        </div>
-                        <div class="believeContainer__row__box__title">Real-world settings mean real-world results</div>
-                        <div class="believeContainer__row__box__copy">Get a picture of life outside the clinic, drawing insights from patients as they experience.</div>
-                    </div>
-                    <div class="believeContainer--grayBG believeContainer__rightBox believeContainer__row__box">
-                        <div>
-                            <img src="./img/phoneTripleGrey.png">
-                        </div>
-                        <div class="believeContainer__row__box__title">Better quality data isn't a luxury, it's a necessity</div>
-                        <div class="believeContainer__row__box__copy">Why settle for subpar or incompletete data sets if you don't have to? Leveraging mobile technology gives you</div>
-                    </div>
-                </div>
-            </div>
+			            <div id="believeContainer">
+			                <div class="believeContainer__row">
+			                    <div class="believeContainer--grayBG believeContainer__leftBox believeContainer__row__box">
+			                        <div>
+										<%= image_tag "computerGrey.png" %>       
+			                        </div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__title">Times are changing</div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__copy">Mobile technology is everywhere, it's time to start leveraging it. Our software transforms the devices your patients already have into powerful data-gathering tools.</div>
+			                    </div>
+			                    <div class="believeContainer__rightBox believeContainer__row__box">
+			                        <div>			
+										<%= image_tag "carFancyPurpWhite.png" %>       
+			                		</div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__title">Patients shouldn't be burdened by the clinic</div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__copy">One of the greatest difficulties for any patient managing a chronic illness or participating in a clinical trial is traveling to and from the clinic. Give your patients one less thing to worry about by collecting data remotely.</div>
+			                    </div>
+			                </div>
+			                <div class="believeContainer__row">
+			                    <div class="believeContainer__leftBox believeContainer__row__box">
+			                        <div>
+										<%= image_tag "housePurpGreyCopy.png" %>       
+			                        </div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__title">Real-world settings mean real-world results</div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__copy">Get a sense of life outside the clinic from your patient's perspective. Daily patient check-ins get you the information you need, on demand and straight from the source.
+			</div>
+			                    </div>
+			                    <div class="believeContainer--grayBG believeContainer__rightBox believeContainer__row__box">
+			                        <div>
+										<%= image_tag "phoneTripleGrey.png" %>       
+			                        </div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__title">Better quality data isn't a luxury, it's a necessity</div>
+									<div class="bottomPadding"> </div>
+			                        <div class="believeContainer__row__box__copy">Why settle for subpar or incomplete data sets if you don't have to? Fill in the gaps between patient visits and strengthen your clinical data by utilizing our remote monitoring tools.</div>
+			                    </div>
+			                </div>
+			            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+	
+    <section class="success" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>Ready to Learn More?</h3>
+					<div class="largeTopPadding"> </div>
+					<div class="bottomSectionPadding"> </div>
+                    <h3>Ready to Learn More? Contact Us.</h3>
+					<div class="bottomSectionPadding"> </div>
+					<h4 class="pinkText"><%= mail_to "info@indigordd.com "%></h4>
+					<div class="bottomSectionPadding"> </div>
                 </div>
             </div>
             <div class="row">
                 <div col-lg-offset-2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+                    <p class="centeredPara">If you'd like to learn more about what Indigo RDD can do for you, let's get the conversation started. Send us an email at info@indigordd.com and we'll be in touch shortly.</p>
                 </div>
+				<div class="largeTopPadding"> </div>
+				<div class="largeTopPadding"> </div>
+				
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact US</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="email">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label for="message">Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>111 E Carpenter St.
-                            <br>Valley Stream, NY 11580</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About IndigoRDD</h3>
-                        <p>Stuff and things and things and stuff.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="footer-below">
             <div class="container">
                 <div class="row">
@@ -236,10 +165,10 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
-
+	<%= javascript_include_tag "jquery" %>
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
+	<%= javascript_include_tag "bootstrap" %>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
@@ -250,6 +179,9 @@
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
 
+	<%= javascript_include_tag "contact_me" %>
+	<%= javascript_include_tag "freelancer" %>
+	
 </body>
 
 </html>
